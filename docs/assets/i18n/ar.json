@@ -71,7 +71,14 @@
     "dynamicFormSettings": "إعدادات النماذج التلقائي"
   },
   "header": {
-    "search": "بحث..."
+    "user": {
+      "profile": "الملف الشخصي",
+      "logout": "تسجيل الخروج"
+    },
+    "notifications": {
+      "notifications": "الإشعارات",
+      "viewAll": "عرض الكل"
+    }
   },
   "dashboard": {
     "exportBtn": "تصدير تقرير",

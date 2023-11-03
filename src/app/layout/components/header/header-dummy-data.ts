@@ -8,7 +8,6 @@ export const notifications: INotification[] = [
 ]
 
 export const userItems: IUserItem[] = [
-  { icon: 'fa-regular fa-user', label: 'Profile' },
-  { icon: 'fa-solid fa-gear', label: 'Settings' },
-  { icon: 'fa-solid fa-power-off', label: 'Logout' }
+  { icon: 'fa-regular fa-user', label: 'header.user.profile' },
+  { icon: 'fa-solid fa-power-off', label: 'header.user.logout' }
 ]

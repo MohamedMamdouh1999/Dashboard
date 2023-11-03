@@ -10,20 +10,20 @@ import { INotification } from '../../interfaces/inotification';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  constructor(private translate: TranslateService) {
+  constructor(public translate: TranslateService) {
     this.currentLanguage = localStorage.getItem("currentLanguage") || "ar";
+    this.translate.use(this.currentLanguage)
     this.translate.onLangChange.subscribe({
       next: () => this.isRtl = this.translate.currentLang === "ar" ? true : false
     })
-    this.translate.use(this.currentLanguage)
   }
 
-  @Input() screenWidth: number = 0;
   @Input() collapsed: boolean = false;
-  notifications: INotification[] = notifications;
-  userItems: IUserItem[] = userItems;
+  @Input() screenWidth: number = 0;
   currentLanguage: string;
   isRtl: boolean = true;
+  userItems: IUserItem[] = userItems;
+  notifications: INotification[] = notifications;
 
   changeCurrentLanguage(language: string){
     this.translate.use(language)

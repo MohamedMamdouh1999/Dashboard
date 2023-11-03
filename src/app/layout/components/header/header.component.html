@@ -23,8 +23,8 @@
   <div class="overlay overlay-notification overlay-fall" cdkMenu>
     <ul>
       <li class="d-flex align-items-center justify-content-between">
-        <div>Notification</div>
-        <a>View All</a>
+        <div translate="header.notifications.notifications"></div>
+        <a translate="header.notifications.viewAll"></a>
       </li>
       <li class="d-flex" *ngFor="let notification of notifications" cdkMenuItem>
         <i [class]="notification.icon"></i>
@@ -42,7 +42,7 @@
       <li *ngFor="let userItem of userItems" cdkMenuItem>
         <a>
           <i [class]="userItem.icon"></i>
-          <span>{{userItem.label}}</span>
+          <span [translate]="userItem.label"></span>
         </a>
       </li>
     </ul>

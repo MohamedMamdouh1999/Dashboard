@@ -71,7 +71,14 @@
     "dynamicFormSettings": "Dynamic Form Settings"
   },
   "header": {
-    "search": "Search..."
+    "user": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "notifications": {
+      "notifications": "Notifications",
+      "viewAll": "View All"
+    }
   },
   "dashboard": {
     "exportBtn": "Export a report",

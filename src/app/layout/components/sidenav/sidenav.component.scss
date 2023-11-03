@@ -137,7 +137,6 @@ nav {
     }
   }
 }
-//scrollbar and visibility on hover and focus
 .scrollwrap {
   overflow-y: auto;
   visibility: hidden;
@@ -154,19 +153,7 @@ nav {
 .scrollwrap_delayed:hover {
   transition: visibility 0.2s 0.2s;
 }
-// works on chrome, edge and safari
-.scrollwrap::-webkit-scrollbar {
-  width: 5px;
-}
-.scrollwrap::-webkit-scrollbar-track {
-  background: transparent;
-}
-.scrollwrap::-webkit-scrollbar-thumb {
-  background-color: #556268;
-  border-radius: 20px;
-}
-// works on firefox
 .scrollwrap {
   scrollbar-width: thin;
-  scrollbar-color: #556268 transparent;
+  scrollbar-color: var(--main-color) transparent;
 }
