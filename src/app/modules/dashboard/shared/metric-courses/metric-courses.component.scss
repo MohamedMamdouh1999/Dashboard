@@ -1,0 +1,30 @@
+article {
+  font-family: 'Cairo', sans-serif;
+  border-color: var(--border-color) !important;
+  border-radius: 8px;
+
+  h5, h6 {
+    color: #667085;
+  }
+  > div > h6 {
+    font-size: 15px;
+  }
+  h3 {
+    margin-inline-end: 5px;
+  }
+  span.rounded-pill {
+    margin-inline-end: 5px;
+  }
+  a {
+    border-top-color: inherit !important;
+    color: var(--main-color);
+  }
+  .item {
+    min-height: 150px;
+    background-color: #fff;
+    border-bottom: 4px solid var(--main-color);
+    span:first-of-type {
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+header {
+  nz-range-picker {
+    height: 41px;
+    box-shadow: none;
+    border-color: var(--border-color);
+  }
+  button {
+    margin-inline-start: 10px;
+    background-color: var(--main-color);
+    svg {
+      margin-inline-start: inherit;
+    }
+  }
+}

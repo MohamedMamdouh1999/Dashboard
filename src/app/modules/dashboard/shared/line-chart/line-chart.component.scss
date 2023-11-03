@@ -1,0 +1,14 @@
+section {
+  border-color: var(--border-color) !important;
+  border-radius: 16px;
+  p {
+    margin-inline-start: 5px;
+    margin-inline-end: 10px;
+  }
+  .code-box-demo {
+    overflow-x: auto;
+  }
+  .code-box-demo .ant-segmented {
+    margin-bottom: 10px;
+  }
+}

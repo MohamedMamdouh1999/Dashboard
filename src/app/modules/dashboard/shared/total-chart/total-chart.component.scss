@@ -1,0 +1,26 @@
+article {
+  border-color: var(--border-color) !important;
+  border-radius: 16px;
+  svg {
+    margin-inline-end: 10px;
+  }
+  ul li {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  a {
+    border-top-color: inherit !important;
+    color: var(--main-color);
+  }
+  .total-text,
+  .total-number {
+    font-size: 15px;
+  }
+  .total-number {
+    margin-inline-start: 7px;
+    background-color: #D0D5DD;
+    color: var(--main-color);
+    padding: 0px 10px;
+    border-radius: 16px;
+  }
+}

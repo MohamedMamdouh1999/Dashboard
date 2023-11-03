@@ -1,0 +1,25 @@
+<section class="my-3 px-3 py-4 border">
+  <div class="d-flex flex-wrap align-items-center justify-content-between">
+    <h5 class="fw-bolder mb-3" translate="dashboard.home.lineChart.traineesInformation"></h5>
+    <div class="overflow-auto">
+      <nz-segmented [nzOptions]="option" (nzValueChange)="handleIndexChange($event)"></nz-segmented>
+    </div>
+  </div>
+  <div class="mt-2 mb-4 d-flex flex-wrap align-items-center">
+    <div class="d-flex align-items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+        <circle cx="4" cy="4" r="4" fill="#F79009"/>
+      </svg>
+      <p class="mb-0" translate="dashboard.home.lineChart.registeredTrainees"></p>
+    </div>
+    <div class="d-flex align-items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+        <circle cx="4" cy="4" r="4" fill="#008755"/>
+      </svg>
+      <p class="mb-0" translate="dashboard.home.lineChart.coursesRate"></p>
+    </div>
+  </div>
+  <div>
+    <p-chart type="line" [data]="data" [options]="options"></p-chart>
+  </div>
+</section>

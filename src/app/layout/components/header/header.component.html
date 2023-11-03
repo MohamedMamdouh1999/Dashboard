@@ -1,0 +1,50 @@
+<header [ngClass]="getHeadClass()" class="position-sticky top-0">
+  <div class="head-content rounded-3 overflow-auto bg-white d-flex align-items-center justify-content-center">
+    <div class="d-flex align-items-center justify-content-center">
+      <button [cdkMenuTriggerFor]="notificationOverlay" class="ripple shadow-none rounded-circle d-flex align-items-center justify-content-center">
+        <i class="fa-solid fa-bell"></i>
+      </button>
+      <button class="shadow-none rounded-circle d-flex align-items-center justify-content-center" *ngIf="isRtl"  (click)="changeCurrentLanguage('en')">
+        <img  src="assets/media/flags/us.jpg" class="rounded-1" alt="United States">
+      </button>
+      <button class="shadow-none rounded-circle d-flex align-items-center justify-content-center" *ngIf="!isRtl"  (click)="changeCurrentLanguage('ar')">
+        <img  src="assets/media/flags/saudi-arabia.svg" class="rounded-1" alt="Saudi Arabia">
+      </button>
+      <div [cdkMenuTriggerFor]="userOverlay" class="user-container">
+        <div class="position-relative">
+          <img class="rounded-3 " src="assets/media/avatar/300-9.jpg" alt="User">
+          <span class="position-absolute rounded-circle" [ngStyle]="isRtl ? {'left': '-3px'} : {'right': '-3px'}"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<ng-template #notificationOverlay>
+  <div class="overlay overlay-notification overlay-fall" cdkMenu>
+    <ul>
+      <li class="d-flex align-items-center justify-content-between">
+        <div>Notification</div>
+        <a>View All</a>
+      </li>
+      <li class="d-flex" *ngFor="let notification of notifications" cdkMenuItem>
+        <i [class]="notification.icon"></i>
+        <div>
+          <div>{{notification.subject}}</div>
+          <p class="mb-0">{{notification.description}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</ng-template>
+<ng-template #userOverlay>
+  <div class="overlay overlay-user overlay-fall" cdkMenu>
+    <ul>
+      <li *ngFor="let userItem of userItems" cdkMenuItem>
+        <a>
+          <i [class]="userItem.icon"></i>
+          <span>{{userItem.label}}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</ng-template>

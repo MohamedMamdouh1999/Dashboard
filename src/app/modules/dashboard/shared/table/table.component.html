@@ -1,0 +1,51 @@
+<div class="table-responsive-lg">
+  <table class="table my-3 border" [ngClass]="{'my-2': !trainees}">
+    <thead>
+      <tr>
+        <td colspan="3">
+          <h5 *ngIf="home" class="py-1 mb-0 fw-bolder" translate="dashboard.table.more10Programs"></h5>
+          <h5 *ngIf="trainees && topTrainees" class="py-1 mb-0 fw-bolder" translate="dashboard.table.topTrainees"></h5>
+          <h5 *ngIf="trainees && minimumTrainees" class="py-1 mb-0 fw-bolder" translate="dashboard.table.minimumTrainees"></h5>
+          <h5 *ngIf="groups" class="py-1 mb-0 fw-bolder" translate="dashboard.table.newestGroup"></h5>
+        </td>
+      </tr>
+      <tr *ngIf="home">
+        <td translate="dashboard.table.courseName"></td>
+        <td translate="dashboard.table.numberTrainees"></td>
+        <td translate="dashboard.table.courseRate"></td>
+      </tr>
+      <tr *ngIf="trainees">
+        <td translate="dashboard.table.traineeName"></td>
+        <td translate="dashboard.table.numberTrainingCourses"></td>
+        <td translate="dashboard.table.courseRate"></td>
+      </tr>
+      <tr *ngIf="groups">
+        <td translate="dashboard.table.groupName"></td>
+        <td translate="dashboard.table.numberTrainingCourses"></td>
+        <td translate="dashboard.table.numberTrainees"></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="!groups">
+        <td>
+          <img loading="lazy" src="assets/media/icons/tv1.svg" alt="Icon">
+          حقيبة مهارات القائد الناجح
+        </td>
+        <td>1000</td>
+        <td>
+          <div class="d-flex flex-nowrap align-items-center justify-content-between">
+            <progress min="0" max="100" value="50"></progress>50%
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="groups">
+        <td>
+          <img loading="lazy" src="assets/media/icons/tv1.svg" alt="Icon">
+          حقيبة مهارات القائد الناجح
+        </td>
+        <td>1000</td>
+        <td>5</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

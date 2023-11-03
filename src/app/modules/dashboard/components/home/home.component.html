@@ -1,0 +1,40 @@
+<app-header [home]="true"></app-header>
+<section class="row gy-3 my-2">
+  <div class="col-xl-4">
+    <app-total-chart [courses]="true" [overData]="[100, 150, 200, 50]"></app-total-chart>
+  </div>
+  <div class="col-xl-4">
+    <app-total-chart [hours]="true" [overData]="[200, 50, 300, 250]"></app-total-chart>
+  </div>
+  <div class="col-xl-4">
+    <app-total-chart [trainees]="true" [overData]="[300, 100, 400, 150]"></app-total-chart>
+  </div>
+</section>
+<section class="row gy-3 my-2">
+  <div class="col-md-6">
+    <app-achievements-chart [activityRemote]="true" [overData]="[100, 50]"></app-achievements-chart>
+  </div>
+  <div class="col-md-6">
+    <app-achievements-chart [activityRecorded]="true" [overData]="[200, 10]"></app-achievements-chart>
+  </div>
+  <div class="col-md-6">
+    <app-achievements-chart [activityOnSite]="true" [overData]="[300, 150]"></app-achievements-chart>
+  </div>
+  <div class="col-md-6">
+    <app-achievements-chart [activityCompact]="true" [overData]="[50, 200]"></app-achievements-chart>
+  </div>
+</section>
+<app-line-chart></app-line-chart>
+<section class="row gy-3 my-2">
+  <div class="col-md-6">
+    <app-achievements-chart [achievementRate]="true" [overData]="[350, 100]"></app-achievements-chart>
+  </div>
+  <div class="col-md-6">
+    <app-achievements-chart [percentageTrainees]="true" [overData]="[150, 400]"></app-achievements-chart>
+  </div>
+</section>
+<app-table [home]="true"></app-table>
+<app-counter-details [remoteCourses]="true"></app-counter-details>
+<app-counter-details [recordedCourses]="true"></app-counter-details>
+<app-counter-details [onSiteCourses]="true"></app-counter-details>
+<app-counter-details [totalOrders]="true"></app-counter-details>

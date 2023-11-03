@@ -1,0 +1,20 @@
+<article class="border my-2">
+  <div class="p-3">
+    <h5 *ngIf="trainees" class="fw-bolder" translate="dashboard.trainees.trainers"></h5>
+    <h5 *ngIf="groups" class="fw-bolder" translate="dashboard.groups.groups"></h5>
+    <h4 class="mb-2 fw-bolder h1">109</h4>
+    <div class="d-flex flex-wrap align-items-center">
+      <span class="rounded-pill px-3 py-1" [ngStyle]="{'background-color': number > 50 ? '#ECFDF3' : '#FEF3F2', 'color': number > 50 ? '#027A48' : '#B42318'}">
+        {{number}}%
+        <svg *ngIf="number > 50" xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 12 12" fill="none">
+          <path d="M6 9.5V2.5M6 2.5L2.5 6M6 2.5L9.5 6" stroke="#027A48" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg *ngIf="number <= 50" style="transform: rotateX(180deg);" xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 12 12" fill="none">
+          <path d="M6 9.5V2.5M6 2.5L2.5 6M6 2.5L9.5 6" stroke="#B42318" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <h6 class="m-0 mt-1 mt-sm-0 fw-bold" translate="dashboard.metricMonth.relativeMonth"></h6>
+    </div>
+  </div>
+  <a routerLink="" target="_blank" class="btn text-center rounded-0 d-block border-top" translate="dashboard.metricMonth.watchReport"></a>
+</article>

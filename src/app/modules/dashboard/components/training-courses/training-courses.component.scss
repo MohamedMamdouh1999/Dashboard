@@ -1,0 +1,24 @@
+:host ::ng-deep {
+  .p-tabview-nav {
+    font-family: 'Cairo', sans-serif;
+    border-bottom: 1px solid var(--border-color) !important;
+  }
+  .p-tabview-nav,
+  .p-tabview-panel {
+    background-color: var(--main-bgc);
+  }
+  .p-tabview-nav-link {
+    border: none;
+    color: initial;
+    font-weight: 500;
+    padding: 15px 20px;
+    &:first-of-type {
+      margin-inline-end: 10px;
+    }
+    &:hover,
+    &[aria-selected="true"] {
+      background-color: var(--main-color);
+      color: white;
+    }
+  };
+}

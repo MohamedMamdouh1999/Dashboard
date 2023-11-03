@@ -1,0 +1,41 @@
+<app-header [trainingCourses]="true"></app-header>
+<div class="mb-5">
+  <p-tabView>
+    <p-tabPanel header="{{'dashboard.courses.effectiveCourses' | translate}}">
+      <div class="row">
+        <div class="col-md-6">
+          <app-metric-courses [effectiveCourses]="true"></app-metric-courses>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <app-metric-courses [totalEnrollment]="true"></app-metric-courses>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <app-metric-courses [completeCourses]="true"></app-metric-courses>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <app-metric-courses [rateCompleteCourses]="true"></app-metric-courses>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="{{'dashboard.courses.archivedCourses' | translate}}">
+      <div class="row">
+        <div class="col-md-6">
+          <app-metric-courses [archivedCourses]="true"></app-metric-courses>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <app-metric-courses [totalEnrollment]="true"></app-metric-courses>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <app-metric-courses [completeCourses]="true"></app-metric-courses>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <app-metric-courses [rateCompleteCourses]="true"></app-metric-courses>
+        </div>
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+</div>

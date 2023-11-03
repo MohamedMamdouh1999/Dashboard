@@ -1,0 +1,33 @@
+article {
+  .col-md-6.col-lg-3 > div,
+  .item {
+    border-color: var(--border-color) !important;
+    border-radius: 16px;
+    p {
+      margin: 0;
+      color: #344054;
+      font-weight: 600;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .item {
+    width: calc(95% / 5);
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .item {
+    width: calc(98% / 2);
+    &:not(:last-of-type) {
+      margin-bottom: 1.25rem;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .item {
+    width: 100%;
+    &:not(:last-of-type) {
+      margin-bottom: 1.25rem;
+    }
+  }
+}
