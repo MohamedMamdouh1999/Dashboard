@@ -13,13 +13,13 @@ import { MetricCoursesComponent } from './shared/metric-courses/metric-courses.c
 import { MetricMonthComponent } from './shared/metric-month/metric-month.component';
 import { TotalChartComponent } from './shared/total-chart/total-chart.component';
 import { TableComponent } from './shared/table/table.component';
-import { TranslateModule } from '@ngx-translate/core';
 import { ChartModule } from 'primeng/chart';
 import { TabViewModule } from 'primeng/tabview';
 import { NzSegmentedModule } from 'ng-zorro-antd/segmented';
 import { LineChartComponent } from './shared/line-chart/line-chart.component';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -39,9 +39,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     DashboardRoutingModule,
+    SharedModule,
     NzDatePickerModule,
     NzSegmentedModule,
-    TranslateModule,
     TabViewModule,
     ChartModule,
     FormsModule

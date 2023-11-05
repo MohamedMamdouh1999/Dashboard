@@ -7,12 +7,12 @@ export const navbarData: INavbarData[] = [
     { routeLink: 'dashboard/trainees', label: 'sidenav.dashboard.trainees'},
     { routeLink: 'dashboard/groups', label: 'sidenav.dashboard.groups'}]
   },
-  { routeLink: 'usersManagement', icon: 'fa-solid fa-users', label: 'sidenav.usersManagement.usersManagement', items: [
-    { routeLink: 'usersManagement/structureManagement', label: 'sidenav.usersManagement.structureManagement'},
-    { routeLink: 'usersManagement/roleManagement', label: 'sidenav.usersManagement.roleManagement'},
-    { routeLink: 'usersManagement/users', label: 'sidenav.usersManagement.users'}]
+  { routeLink: 'users-management', icon: 'fa-solid fa-users', label: 'sidenav.usersManagement.usersManagement', items: [
+    { routeLink: 'users-management/organization', label: 'sidenav.usersManagement.structureManagement'},
+    { routeLink: 'users-management/role', label: 'sidenav.usersManagement.roleManagement'},
+    { routeLink: 'users-management/users', label: 'sidenav.usersManagement.users'}]
   },
-  { routeLink: 'categoryManagement', icon: 'fa-solid fa-layer-group', label: 'sidenav.categoryManagement' },
+  { routeLink: 'programs', icon: 'fa-solid fa-layer-group', label: 'sidenav.categoryManagement' },
   { routeLink: 'nominationPermissionsManagement', icon: 'fa-solid fa-user-group', label: 'sidenav.nominationPermissionsManagement' },
   { routeLink: 'trainingPlan', icon: 'fa-solid fa-user-plus', label: 'sidenav.trainingPlan' },
   { routeLink: 'courses', icon: 'fa-solid fa-tornado', label: 'sidenav.courses' },
@@ -57,7 +57,7 @@ export const navbarData: INavbarData[] = [
   { routeLink: 'messagesSettings', icon: 'fa-solid fa-bell', label: 'sidenav.messagesSettings.messagesNotificationSettings', items: [
     { routeLink: 'messagesSettings/messagesConfigurations', label: 'sidenav.messagesSettings.messagesConfigurations'},
     { routeLink: 'messagesSettings/emailConfigurations', label: 'sidenav.messagesSettings.emailConfigurations'},
-    { routeLink: 'pagesManagement/emailTemplate', label: 'sidenav.pagesManagement.emailTemplate'}]
+    { routeLink: 'pagesManagement/emailTemplate', label: 'sidenav.messagesSettings.emailTemplate'}]
   },
   { routeLink: 'videoConferences', icon: 'fa-solid fa-video', label: 'sidenav.videoConferences' },
   { routeLink: 'dynamicFormSettings', icon: 'fa-solid fa-gear', label: 'sidenav.dynamicFormSettings' }

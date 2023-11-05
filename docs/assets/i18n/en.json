@@ -157,5 +157,24 @@
       "numberTrainingCourses": "Number of training courses",
       "groupName": "Group name"
     }
+  },
+  "usersManagement": {
+    "structureManagement": {
+      "structureManagement": "Structure Management",
+      "addOrganization": "Add Organization",
+      "form": {
+        "organizationType": "Organization Type",
+        "nameAr": "Name in Arabic",
+        "nameEn": "Name in English",
+        "description": "Description",
+        "save": "Save",
+        "cancel": "Cancel",
+        "errors": {
+          "required": "This field is required",
+          "patternAr": "You must enter Arabic letters",
+          "patternEn": "You must enter English letters"
+        }
+      }
+    }
   }
 }

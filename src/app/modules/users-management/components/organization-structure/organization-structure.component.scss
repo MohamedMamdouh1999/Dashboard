@@ -1,0 +1,26 @@
+button {
+  &.add-btn {
+    color: #00d68f;
+    border-color: #00d68f;
+    background-color: rgb(0 214 143 / 8%);
+    &:hover {
+      color: #00d68f;
+      border-color: #00d68f;
+      background-color: rgb(0 214 143 / 16%);
+    }
+    i {
+      margin-inline-start: 10px;
+    }
+  }
+  &:not(.add-btn) {
+    width: 45%;
+  }
+}
+:host ::ng-deep {
+  .p-dialog {
+    margin-inline-start: 5rem;
+  }
+  .p-dialog-content {
+    padding: 0px 10px 10px !important;
+  }
+}

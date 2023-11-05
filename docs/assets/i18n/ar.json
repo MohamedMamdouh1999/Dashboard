@@ -157,5 +157,24 @@
       "numberTrainingCourses": "عدد الدورات التدريبية",
       "groupName": "إسم المجموعة"
     }
+  },
+  "usersManagement": {
+    "structureManagement": {
+      "structureManagement": "إدارة هيكل المؤسسة",
+      "addOrganization": "إضافة جهه",
+      "form": {
+        "organizationType": "نوع الجهه :",
+        "nameAr": "الإسم باللغة العربية :",
+        "nameEn": "الإسم باللغة الإنجليزية :",
+        "description": "تفاصيل :",
+        "save": "حفظ",
+        "cancel": "إلغاء",
+        "errors": {
+          "required": "هذا الحقل مطلوب",
+          "patternAr": "يجب إدخال حروف عربية",
+          "patternEn": "يجب إدخال حروف إنجليزية"
+        }
+      }
+    }
   }
 }
