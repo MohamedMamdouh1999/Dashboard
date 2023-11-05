@@ -17,6 +17,9 @@ button {
   }
 }
 :host ::ng-deep {
+  .p-dialog-mask {
+    top: 20px;
+  }
   .p-dialog {
     margin-inline-start: 5rem;
   }

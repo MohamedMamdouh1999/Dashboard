@@ -28,7 +28,6 @@ export class SidenavComponent implements OnInit {
   constructor(public router: Router) {}
 
   @Output() onToggleSideNav: EventEmitter<ISideNavToggle> = new EventEmitter();
-  @HostListener('window:resize', ['$event'])
   multiple: boolean = false;
   navData = navbarData;
   collapsed = false;

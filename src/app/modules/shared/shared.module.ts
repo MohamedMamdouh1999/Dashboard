@@ -1,33 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TableHeadComponent } from './components/table-head/table-head.component';
-import { SelectFormComponent } from './components/form/select-form/select-form.component';
-import { TextFormComponent } from './components/form/text-form/text-form.component';
 import { TranslateModule } from '@ngx-translate/core';
-import { TextAreaFormComponent } from './components/form/text-area-form/text-area-form.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SelectInputComponent } from './components/inputs/select-input/select-input.component';
+import { TextInputComponent } from './components/inputs/text-input/text-input.component';
+import { TextAreaInputComponent } from './components/inputs/text-area-input/text-area-input.component';
 
 @NgModule({
   declarations: [
     TableHeadComponent,
-    SelectFormComponent,
-    TextFormComponent,
-    TextAreaFormComponent,
+    SelectInputComponent,
+    TextInputComponent,
+    TextAreaInputComponent,
   ],
   imports: [
     CommonModule,
-    FormsModule,
     ReactiveFormsModule,
     TranslateModule
   ],
   exports: [
     TranslateModule,
-    FormsModule,
     ReactiveFormsModule,
     TableHeadComponent,
-    SelectFormComponent,
-    TextFormComponent,
-    TextAreaFormComponent
+    SelectInputComponent,
+    TextInputComponent,
+    TextAreaInputComponent
   ]
 })
 export class SharedModule { }
