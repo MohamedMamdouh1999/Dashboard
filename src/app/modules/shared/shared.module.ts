@@ -6,6 +6,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SelectInputComponent } from './components/inputs/select-input/select-input.component';
 import { TextInputComponent } from './components/inputs/text-input/text-input.component';
 import { TextAreaInputComponent } from './components/inputs/text-area-input/text-area-input.component';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkMenuModule } from '@angular/cdk/menu';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { TextAreaInputComponent } from './components/inputs/text-area-input/text
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    TranslateModule
+    TranslateModule,
+    OverlayModule,
+    CdkMenuModule
   ],
   exports: [
     TranslateModule,
@@ -27,7 +31,9 @@ import { TextAreaInputComponent } from './components/inputs/text-area-input/text
     TableHeadComponent,
     SelectInputComponent,
     TextInputComponent,
-    TextAreaInputComponent
+    TextAreaInputComponent,
+    OverlayModule,
+    CdkMenuModule
   ]
 })
 export class SharedModule { }

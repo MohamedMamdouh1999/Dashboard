@@ -1,7 +1,4 @@
-<app-table-head [organizationStructure]="true" [title]="'usersManagement.structureManagement.structureManagement'"></app-table-head>
-<button class="btn add-btn" (click)="visible = !visible" translate="usersManagement.structureManagement.addOrganization">
-  <i class="fa-solid fa-plus"></i>
-</button>
+<app-table-head (visible)="visible = $event" [organizationStructure]="true" [title]="'usersManagement.structureManagement.structureManagement'"></app-table-head>
 <p-dialog [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [breakpoints]="{ '960px': '75vw' }" [draggable]="false" [resizable]="false">
   <form [formGroup]="usersManagement" (ngSubmit)="submitForm(usersManagement)" #form="ngForm">
     <div class="form-group mb-3">
@@ -10,16 +7,16 @@
     </div>
     <div class="form-group mb-3">
       <app-text-input formControlName="nameAr" [type]="'text'" [id]="'organizationNameAr'" [name]="'organizationNameAr'" [label]="'usersManagement.structureManagement.form.nameAr'"></app-text-input>
-      <div *ngIf="form.submitted || (usersManagement.get('nameAr')?.errors && usersManagement.get('nameAr')?.touched)" class="text-danger mb-3">
-        <p *ngIf="form.submitted && usersManagement.get('nameAr')?.getError('required')" class="mb-0" translate="usersManagement.structureManagement.form.errors.required"></p>
-        <p *ngIf="usersManagement.get('nameAr')?.getError('pattern')" class="mb-0" translate="usersManagement.structureManagement.form.errors.patternAr"></p>
+      <div *ngIf="form.submitted || (nameAr?.errors && nameAr?.touched)" class="text-danger mb-3">
+        <p *ngIf="form.submitted && nameAr?.getError('required')" class="mb-0" translate="usersManagement.structureManagement.form.errors.required"></p>
+        <p *ngIf="nameAr?.getError('pattern')" class="mb-0" translate="usersManagement.structureManagement.form.errors.patternAr"></p>
       </div>
     </div>
     <div class="form-group mb-3">
       <app-text-input formControlName="nameEn" [type]="'text'" [id]="'organizationNameEn'" [name]="'organizationNameEn'" [label]="'usersManagement.structureManagement.form.nameEn'"></app-text-input>
-      <div *ngIf="form.submitted || (usersManagement.get('nameEn')?.errors && usersManagement.get('nameEn')?.touched)" class="text-danger mb-3">
-        <p *ngIf="form.submitted && usersManagement.get('nameEn')?.getError('required')" class="mb-0" translate="usersManagement.structureManagement.form.errors.required"></p>
-        <p *ngIf="usersManagement.get('nameEn')?.getError('pattern')" class="mb-0" translate="usersManagement.structureManagement.form.errors.patternEn"></p>
+      <div *ngIf="form.submitted || (nameEn?.errors && nameEn?.touched)" class="text-danger mb-3">
+        <p *ngIf="form.submitted && nameEn?.getError('required')" class="mb-0" translate="usersManagement.structureManagement.form.errors.required"></p>
+        <p *ngIf="nameEn?.getError('pattern')" class="mb-0" translate="usersManagement.structureManagement.form.errors.patternEn"></p>
       </div>
     </div>
     <div class="form-group mb-3">
@@ -31,3 +28,105 @@
     </div>
   </form>
 </p-dialog>
+<section class="p-3 shadow-sm rounded-bottom-3">
+  <div class="row gy-3">
+    <div class="col-xl-3 col-lg-4 col-md-6">
+      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
+        <span class="position-absolute rounded-circle"></span>
+        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
+        <div class="d-flex align-items-center text-center">
+          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمنطقة الجوف</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-6">
+      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
+        <span class="position-absolute rounded-circle"></span>
+        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
+        <div class="d-flex align-items-center text-center">
+          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 2]">الشئون الصحية بمنطقة نجران</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-6">
+      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
+        <span class="position-absolute rounded-circle"></span>
+        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
+        <div class="d-flex align-items-center text-center">
+          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 3]">الشئون الصحية بمنطقة عسير</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-6">
+      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
+        <span class="position-absolute rounded-circle"></span>
+        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
+        <div class="d-flex align-items-center text-center">
+          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمنطقة تبوك</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-6">
+      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
+        <span class="position-absolute rounded-circle"></span>
+        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
+        <div class="d-flex align-items-center text-center">
+          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمنطقة القصيم</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-6">
+      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
+        <span class="position-absolute rounded-circle"></span>
+        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
+        <div class="d-flex align-items-center text-center">
+          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمنطقة الرياض</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-6">
+      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
+        <span class="position-absolute rounded-circle"></span>
+        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
+        <div class="d-flex align-items-center text-center">
+          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمحافظة بيشة</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-6">
+      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
+        <span class="position-absolute rounded-circle"></span>
+        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
+        <div class="d-flex align-items-center text-center">
+          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمحافظة القنفذة</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-6">
+      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
+        <span class="position-absolute rounded-circle"></span>
+        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
+        <div class="d-flex align-items-center text-center">
+          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمحافظة الأحساء</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-6">
+      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
+        <span class="position-absolute rounded-circle"></span>
+        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
+        <div class="d-flex align-items-center text-center">
+          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الإدارة العامة للطواري والسلامة والنقل الأسعافي</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<ng-template #settingsOverlay>
+  <div class="overlay-fall" cdkMenu>
+    <ul>
+      <li cdkMenuItem (click)="visible = !visible;" class="mt-1 rounded-circle d-flex align-items-center justify-content-center"><i class="text-white fa-solid fa-pen"></i></li>
+      <li cdkMenuItem class="mt-1 rounded-circle d-flex align-items-center justify-content-center"><i class="text-white fa-solid fa-trash-can"></i></li>
+    </ul>
+  </div>
+</ng-template>

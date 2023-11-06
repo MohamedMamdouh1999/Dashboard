@@ -4,8 +4,8 @@ import { UsersManagementRoutingModule } from './users-management-routing.module'
 import { OrganizationStructureComponent } from './components/organization-structure/organization-structure.component';
 import { RoleManagementComponent } from './components/role-management/role-management.component';
 import { UsersComponent } from './components/users/users.component';
-import { SharedModule } from '../shared/shared.module';
 import { DialogModule } from 'primeng/dialog';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,8 +16,8 @@ import { DialogModule } from 'primeng/dialog';
   imports: [
     CommonModule,
     UsersManagementRoutingModule,
-    SharedModule,
-    DialogModule
+    DialogModule,
+    SharedModule
   ]
 })
 export class UsersManagementModule { }

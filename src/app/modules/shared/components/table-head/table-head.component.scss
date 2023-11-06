@@ -1,3 +1,10 @@
 header {
   background-color: var(--main-color);
+  button {
+    color: black;
+    background-color: white;
+    i {
+      margin-inline-start: 5px;
+    }
+  }
 }

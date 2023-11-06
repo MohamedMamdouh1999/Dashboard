@@ -1,3 +1,8 @@
-<header class="rounded-top p-2 mb-3">
-  <h5 *ngIf="organizationStructure" class="text-white mb-0" [translate]="title"></h5>
+<header class="rounded-top-3 p-2">
+  <div *ngIf="organizationStructure" class="d-flex flex-wrap align-items-center justify-content-between">
+    <h5 class="text-white mb-0" [translate]="title"></h5>
+    <button class="btn border-0 mt-2 mt-sm-0" (click)="visibleModel(true)" translate="usersManagement.structureManagement.addOrganization">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+  </div>
 </header>

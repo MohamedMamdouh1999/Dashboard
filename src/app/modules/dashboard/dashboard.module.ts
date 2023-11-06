@@ -18,7 +18,6 @@ import { TabViewModule } from 'primeng/tabview';
 import { NzSegmentedModule } from 'ng-zorro-antd/segmented';
 import { LineChartComponent } from './shared/line-chart/line-chart.component';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
-import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -43,8 +42,7 @@ import { SharedModule } from '../shared/shared.module';
     NzDatePickerModule,
     NzSegmentedModule,
     TabViewModule,
-    ChartModule,
-    FormsModule
+    ChartModule
   ]
 })
 export class DashboardModule { }
