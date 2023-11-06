@@ -169,6 +169,7 @@
         "description": "Description",
         "save": "Save",
         "cancel": "Cancel",
+        "select": "Select",
         "errors": {
           "required": "This field is required",
           "patternAr": "You must enter Arabic letters",

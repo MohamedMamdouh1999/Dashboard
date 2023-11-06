@@ -169,6 +169,7 @@
         "description": "تفاصيل :",
         "save": "حفظ",
         "cancel": "إلغاء",
+        "select": "إختر",
         "errors": {
           "required": "هذا الحقل مطلوب",
           "patternAr": "يجب إدخال حروف عربية",

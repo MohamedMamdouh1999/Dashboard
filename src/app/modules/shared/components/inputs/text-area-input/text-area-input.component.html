@@ -1,4 +1,2 @@
-<form [formGroup]="form">
-  <label class="mb-2" [for]="id" [translate]="label"></label>
-  <textarea [formControlName]="formName" class="form-control shadow-none" [name]="name" [id]="id"></textarea>
-</form>
+<label class="mb-2" [for]="id" [translate]="label"></label>
+<textarea [ngModel]="value" (ngModelChange)="onChange($event)" (blur)="onTouched()" class="form-control shadow-none" [name]="name" [id]="id"></textarea>
