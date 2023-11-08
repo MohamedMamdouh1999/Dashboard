@@ -4,36 +4,36 @@
     <p-tabPanel header="{{'dashboard.courses.effectiveCourses' | translate}}">
       <div class="row">
         <div class="col-md-6">
-          <app-metric-courses [effectiveCourses]="true"></app-metric-courses>
+          <app-metric-courses [lastMonth]="true" [coursesAnalysis]="true" [title]="'dashboard.courses.effectiveCourses'"></app-metric-courses>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-4 col-md-6">
-          <app-metric-courses [totalEnrollment]="true"></app-metric-courses>
+          <app-metric-courses [coursesAnalysis]="true" [title]="'dashboard.courses.totalEnrollment'"></app-metric-courses>
         </div>
         <div class="col-lg-4 col-md-6">
-          <app-metric-courses [completeCourses]="true"></app-metric-courses>
+          <app-metric-courses [coursesAnalysis]="true" [title]="'dashboard.courses.completeCourses'"></app-metric-courses>
         </div>
         <div class="col-lg-4 col-md-6">
-          <app-metric-courses [rateCompleteCourses]="true"></app-metric-courses>
+          <app-metric-courses [coursesAnalysis]="true" [title]="'dashboard.courses.rateCompleteCourses'"></app-metric-courses>
         </div>
       </div>
     </p-tabPanel>
     <p-tabPanel header="{{'dashboard.courses.archivedCourses' | translate}}">
       <div class="row">
         <div class="col-md-6">
-          <app-metric-courses [archivedCourses]="true"></app-metric-courses>
+          <app-metric-courses [lastMonth]="true" [coursesAnalysis]="true" [title]="'dashboard.courses.archivedCourses'"></app-metric-courses>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-4 col-md-6">
-          <app-metric-courses [totalEnrollment]="true"></app-metric-courses>
+          <app-metric-courses [coursesAnalysis]="true" [title]="'dashboard.courses.totalEnrollment'"></app-metric-courses>
         </div>
         <div class="col-lg-4 col-md-6">
-          <app-metric-courses [completeCourses]="true"></app-metric-courses>
+          <app-metric-courses [coursesAnalysis]="true" [title]="'dashboard.courses.completeCourses'"></app-metric-courses>
         </div>
         <div class="col-lg-4 col-md-6">
-          <app-metric-courses [rateCompleteCourses]="true"></app-metric-courses>
+          <app-metric-courses [coursesAnalysis]="true" [title]="'dashboard.courses.rateCompleteCourses'"></app-metric-courses>
         </div>
       </div>
     </p-tabPanel>

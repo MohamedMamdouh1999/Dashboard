@@ -6,10 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./total-chart.component.scss']
 })
 export class TotalChartComponent implements OnInit {
-  @Input() courses: boolean = false;
-  @Input() hours: boolean = false;
-  @Input() trainees: boolean = false;
-  @Input() overData: number[] = [];
+  @Input() title!: string;
+  @Input() courses!: boolean;
+  @Input() hours!: boolean;
+  @Input() trainees!: boolean;
+  @Input() overData!: number[];
   data: any;
   options: any;
   ngOnInit() {

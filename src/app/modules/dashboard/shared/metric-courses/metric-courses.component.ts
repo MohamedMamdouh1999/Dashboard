@@ -6,10 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./metric-courses.component.scss']
 })
 export class MetricCoursesComponent {
-  @Input() effectiveCourses: boolean = false;
-  @Input() archivedCourses: boolean = false;
-  @Input() totalEnrollment: boolean = false;
-  @Input() completeCourses: boolean = false;
-  @Input() rateCompleteCourses: boolean = false;
-  number: number = 50
+  @Input() coursesAnalysis!: boolean;
+  @Input() lastMonth!: boolean;
+  @Input() title!: string;
+  number: number = 70;
 }

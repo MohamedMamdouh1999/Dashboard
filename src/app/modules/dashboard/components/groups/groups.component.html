@@ -1,3 +1,5 @@
 <app-header [title]="'sidenav.dashboard.groups'"></app-header>
-<app-metric-month [groups]="true"></app-metric-month>
-<app-table [groups]="true"></app-table>
+<app-metric-courses [lastMonth]="true" [title]="'dashboard.groups.groups'"></app-metric-courses>
+<app-table [groups]="true"
+[title]="'dashboard.table.newestGroup'"
+[head1]="'dashboard.table.groupName'" [head2]="'dashboard.table.numberTrainingCourses'" [head3]="'dashboard.table.numberTrainees'"></app-table>

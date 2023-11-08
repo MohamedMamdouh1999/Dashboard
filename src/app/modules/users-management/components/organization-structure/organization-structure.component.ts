@@ -15,8 +15,8 @@ export class OrganizationStructureComponent implements OnInit {
     nameEn: [null, [Validators.required, Validators.pattern(/^[A-Za-z\s]{1,50}$/)]],
     description: [null]
   }, {updateOn: 'change'})
-  showConfirmDelete: boolean = false;
-  showForm: boolean = false;
+  showConfirmDelete!: boolean;
+  showForm!: boolean;
   id!: number;
   ngOnInit(): void {
     this._ActivatedRoute.paramMap.subscribe(paramMap => this.id = Number(paramMap.get('id')))

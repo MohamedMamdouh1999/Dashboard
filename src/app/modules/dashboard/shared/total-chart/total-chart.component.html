@@ -1,19 +1,13 @@
 <article class="border">
   <div class="px-3 py-4">
-    <h5 *ngIf="courses">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <h5>
+      <svg *ngIf="courses" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M12 20H5.2C4.07989 20 3.51984 20 3.09202 19.782C2.71569 19.5903 2.40973 19.2843 2.21799 18.908C2 18.4802 2 17.9201 2 16.8V7.2C2 6.07989 2 5.51984 2.21799 5.09202C2.40973 4.71569 2.71569 4.40973 3.09202 4.21799C3.51984 4 4.07989 4 5.2 4H5.6C7.84021 4 8.96031 4 9.81596 4.43597C10.5686 4.81947 11.1805 5.43139 11.564 6.18404C12 7.03968 12 8.15979 12 10.4M12 20V10.4M12 20H18.8C19.9201 20 20.4802 20 20.908 19.782C21.2843 19.5903 21.5903 19.2843 21.782 18.908C22 18.4802 22 17.9201 22 16.8V7.2C22 6.07989 22 5.51984 21.782 5.09202C21.5903 4.71569 21.2843 4.40973 20.908 4.21799C20.4802 4 19.9201 4 18.8 4H18.4C16.1598 4 15.0397 4 14.184 4.43597C13.4314 4.81947 12.8195 5.43139 12.436 6.18404C12 7.03968 12 8.15979 12 10.4" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      {{"dashboard.home.totalChart.numberCourses" | translate}}
-    </h5>
-    <h5 *ngIf="hours">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+      <svg *ngIf="hours" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
         <path d="M12.6665 9.5V13.5L15.1665 15M12.6665 5C7.97208 5 4.1665 8.80558 4.1665 13.5C4.1665 18.1944 7.97208 22 12.6665 22C17.3609 22 21.1665 18.1944 21.1665 13.5C21.1665 8.80558 17.3609 5 12.6665 5ZM12.6665 5V2M10.6665 2H14.6665M20.9955 5.59204L19.4955 4.09204L20.2455 4.84204M4.33752 5.59204L5.83752 4.09204L5.08752 4.84204" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      {{"dashboard.home.totalChart.numberHours" | translate}}
-    </h5>
-    <h5 *ngIf="trainees">
-      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+      <svg *ngIf="trainees" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
         <g clip-path="url(#clip0_7157_1821)">
           <path d="M17.3333 21V19C17.3333 17.9391 16.9118 16.9217 16.1617 16.1716C15.4115 15.4214 14.3941 15 13.3333 15H5.33325C4.27239 15 3.25497 15.4214 2.50482 16.1716C1.75468 16.9217 1.33325 17.9391 1.33325 19V21M23.3333 21V19C23.3326 18.1137 23.0376 17.2528 22.4946 16.5523C21.9516 15.8519 21.1914 15.3516 20.3333 15.13M16.3333 3.13C17.1937 3.3503 17.9563 3.8507 18.5009 4.55231C19.0455 5.25392 19.3411 6.11683 19.3411 7.005C19.3411 7.89317 19.0455 8.75608 18.5009 9.45769C17.9563 10.1593 17.1937 10.6597 16.3333 10.88M13.3333 7C13.3333 9.20914 11.5424 11 9.33325 11C7.12411 11 5.33325 9.20914 5.33325 7C5.33325 4.79086 7.12411 3 9.33325 3C11.5424 3 13.3333 4.79086 13.3333 7Z" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
@@ -23,7 +17,7 @@
           </clipPath>
         </defs>
       </svg>
-      {{"dashboard.home.totalChart.numberTrainees" | translate}}
+      {{title | translate}}
     </h5>
     <div class="row flex-align">
       <div class="col-lg-6">
@@ -71,9 +65,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
             <circle cx="4" cy="4" r="4" fill="#000"/>
           </svg>
-          <span class="total-text text-nowrap" *ngIf="courses" translate="dashboard.home.totalChart.numberCourses"></span>
-          <span class="total-text text-nowrap" *ngIf="hours" translate="dashboard.home.totalChart.numberHours"></span>
-          <span class="total-text text-nowrap" *ngIf="trainees" translate="dashboard.home.totalChart.numberTrainees"></span>
+          <span class="total-text text-nowrap" [translate]="title"></span>
           <span class="total-number rounded-pill">100</span>
         </div>
       </div>

@@ -12,7 +12,7 @@ export class LineChartComponent {
     this.isRtl ? this.option = ['7 أيام', '30 يوم', '3 أشهر', '12 شهر'] : this.option = ['7 Days', '30 Days', '3 Months', '12 Months'];
   }
   isRtl: boolean;
-  option: string[] = []
+  option: string[];
   handleIndexChange(e: number): void {
     console.log(e);
   }

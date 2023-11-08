@@ -1,13 +1,9 @@
 <article class="border my-2">
   <div class="p-3">
-    <h5 *ngIf="effectiveCourses" class="fw-bolder" translate="dashboard.courses.effectiveCourses"></h5>
-    <h5 *ngIf="archivedCourses" class="fw-bolder" translate="dashboard.courses.archivedCourses"></h5>
-    <h6 *ngIf="totalEnrollment" class="fw-bolder" translate="dashboard.courses.totalEnrollment"></h6>
-    <h6 *ngIf="completeCourses" class="fw-bolder" translate="dashboard.courses.completeCourses"></h6>
-    <h6 *ngIf="rateCompleteCourses" class="fw-bolder" translate="dashboard.courses.rateCompleteCourses"></h6>
+    <h5 class="fw-bolder" [translate]="title"></h5>
     <div class="flex-align-wrap">
       <h3 class="mb-2 fw-bolder">109</h3>
-      <div *ngIf="effectiveCourses || archivedCourses" class="mb-2 flex-align-wrap">
+      <div *ngIf="lastMonth" class="mb-2 flex-align-wrap">
         <span class="rounded-pill px-3 py-1" [ngStyle]="{'background-color': number > 50 ? '#ECFDF3' : '#FEF3F2', 'color': number > 50 ? '#027A48' : '#B42318'}">
           {{number}}%
           <svg *ngIf="number > 50" xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 12 12" fill="none">
@@ -17,37 +13,21 @@
             <path d="M6 9.5V2.5M6 2.5L2.5 6M6 2.5L9.5 6" stroke="#B42318" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
-        <h6 class="m-0 mt-1 mt-sm-0 fw-bold" translate="dashboard.metricMonth.relativeMonth"></h6>
+        <p class="mb-0 mt-1 mt-sm-0" translate="dashboard.metricMonth.relativeMonth"></p>
       </div>
     </div>
-    <div class="row gx-2 mt-2">
+    <div *ngIf="coursesAnalysis" class="row gx-2 mt-2">
       <div class="col-3">
-        <div class="item flex-column flex-evenly rounded">
-          <span translate="dashboard.courses.remote"></span>
-          <h5 class="text-black fw-bold m-0">60</h5>
-          <span>50%</span>
-        </div>
+        <app-metric-card [total]="60" [percentage]="50" [title]="'dashboard.courses.remote'"></app-metric-card>
       </div>
       <div class="col-3">
-        <div class="item flex-column flex-evenly rounded">
-          <span translate="dashboard.courses.recorded"></span>
-          <h5 class="text-black fw-bold m-0">60</h5>
-          <span>50%</span>
-        </div>
+        <app-metric-card [total]="60" [percentage]="50" [title]="'dashboard.courses.recorded'"></app-metric-card>
       </div>
       <div class="col-3">
-        <div class="item flex-column flex-evenly rounded">
-          <span translate="dashboard.courses.onSite"></span>
-          <h5 class="text-black fw-bold m-0">60</h5>
-          <span>50%</span>
-        </div>
+        <app-metric-card [total]="60" [percentage]="50" [title]="'dashboard.courses.onSite'"></app-metric-card>
       </div>
       <div class="col-3">
-        <div class="item flex-column flex-evenly rounded">
-          <span translate="dashboard.courses.compact"></span>
-          <h5 class="text-black fw-bold m-0">60</h5>
-          <span>50%</span>
-        </div>
+        <app-metric-card [total]="60" [percentage]="50" [title]="'dashboard.courses.compact'"></app-metric-card>
       </div>
     </div>
   </div>

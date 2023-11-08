@@ -6,13 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./achievements-chart.component.scss']
 })
 export class AchievementsChartComponent {
-  @Input() activityRemote: boolean = false;
-  @Input() activityRecorded: boolean = false;
-  @Input() activityOnSite: boolean = false;
-  @Input() activityCompact: boolean = false;
-  @Input() achievementRate: boolean = false;
-  @Input() percentageTrainees: boolean = false;
-  @Input() overData: number[] = [];
+  @Input() overData!: number[];
+  @Input() title!: string;
   data: any;
   options: any;
   ngOnInit() {

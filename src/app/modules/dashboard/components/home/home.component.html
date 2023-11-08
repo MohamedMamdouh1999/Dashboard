@@ -1,40 +1,41 @@
 <app-header [title]="'sidenav.dashboard.mainDashboard'" [home]="true"></app-header>
 <section class="row gy-3 my-2">
   <div class="col-xl-4">
-    <app-total-chart [courses]="true" [overData]="[100, 150, 200, 50]"></app-total-chart>
+    <app-total-chart [courses]="true" [title]="'dashboard.home.totalChart.numberCourses'" [overData]="[100, 150, 200, 50]"></app-total-chart>
   </div>
   <div class="col-xl-4">
-    <app-total-chart [hours]="true" [overData]="[200, 50, 300, 250]"></app-total-chart>
+    <app-total-chart [hours]="true" [title]="'dashboard.home.totalChart.numberHours'" [overData]="[200, 50, 300, 250]"></app-total-chart>
   </div>
   <div class="col-xl-4">
-    <app-total-chart [trainees]="true" [overData]="[300, 100, 400, 150]"></app-total-chart>
+    <app-total-chart [trainees]="true" [title]="'dashboard.home.totalChart.numberTrainees'" [overData]="[300, 100, 400, 150]"></app-total-chart>
   </div>
 </section>
 <section class="row gy-3 my-2">
   <div class="col-md-6">
-    <app-achievements-chart [activityRemote]="true" [overData]="[100, 50]"></app-achievements-chart>
+    <app-achievements-chart [overData]="[100, 50]" [title]="'dashboard.home.achievementsChart.activityRemote'"></app-achievements-chart>
   </div>
   <div class="col-md-6">
-    <app-achievements-chart [activityRecorded]="true" [overData]="[200, 10]"></app-achievements-chart>
+    <app-achievements-chart [overData]="[200, 10]" [title]="'dashboard.home.achievementsChart.activityRecorded'"></app-achievements-chart>
   </div>
   <div class="col-md-6">
-    <app-achievements-chart [activityOnSite]="true" [overData]="[300, 150]"></app-achievements-chart>
+    <app-achievements-chart [overData]="[300, 150]" [title]="'dashboard.home.achievementsChart.activityOnSite'"></app-achievements-chart>
   </div>
   <div class="col-md-6">
-    <app-achievements-chart [activityCompact]="true" [overData]="[50, 200]"></app-achievements-chart>
+    <app-achievements-chart [overData]="[50, 200]" [title]="'dashboard.home.achievementsChart.activityCompact'"></app-achievements-chart>
   </div>
 </section>
 <app-line-chart></app-line-chart>
 <section class="row gy-3 my-2">
   <div class="col-md-6">
-    <app-achievements-chart [achievementRate]="true" [overData]="[350, 100]"></app-achievements-chart>
+    <app-achievements-chart [overData]="[350, 100]" [title]="'dashboard.home.achievementsChart.achievementRate'"></app-achievements-chart>
   </div>
   <div class="col-md-6">
-    <app-achievements-chart [percentageTrainees]="true" [overData]="[150, 400]"></app-achievements-chart>
+    <app-achievements-chart [overData]="[150, 400]" [title]="'dashboard.home.achievementsChart.percentageTrainees'"></app-achievements-chart>
   </div>
 </section>
-<app-table [home]="true"></app-table>
-<app-counter-details [remoteCourses]="true"></app-counter-details>
-<app-counter-details [recordedCourses]="true"></app-counter-details>
-<app-counter-details [onSiteCourses]="true"></app-counter-details>
-<app-counter-details [totalOrders]="true"></app-counter-details>
+<app-table [title]="'dashboard.table.more10Programs'"
+[head1]="'dashboard.table.courseName'" [head2]="'dashboard.table.numberTrainees'" [head3]="'dashboard.table.courseRate'"></app-table>
+<app-counter-details [title]="'dashboard.home.counterDetails.remoteCourses'"></app-counter-details>
+<app-counter-details [title]="'dashboard.home.counterDetails.recordedCourses'"></app-counter-details>
+<app-counter-details [title]="'dashboard.home.counterDetails.onSiteCourses'"></app-counter-details>
+<app-counter-details [totalOrders]="true" [title]="'dashboard.home.counterDetails.totalOrders'"></app-counter-details>

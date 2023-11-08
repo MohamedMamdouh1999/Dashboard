@@ -7,8 +7,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class HeaderSectionComponent {
   @Output() visible = new EventEmitter<boolean>();
-  @Input() organizationStructure: boolean = false;
-  @Input() title: string = '';
+  @Input() organizationStructure!: boolean;
+  @Input() title!: string;
   visibleModel(visible: boolean){
     this.visible.emit(visible)
   }

@@ -1,45 +1,19 @@
 <header [ngClass]="getHeadClass()" class="position-sticky top-0">
   <div class="head-content rounded-3 overflow-auto bg-white flex-end">
     <div class="flex-middle">
-      <button
-        [cdkMenuTriggerFor]="notificationOverlay"
-        class="ripple shadow-none rounded-circle flex-middle"
-      >
+      <button [cdkMenuTriggerFor]="notificationOverlay" class="ripple shadow-none rounded-circle flex-middle">
         <i class="fa-solid fa-bell"></i>
       </button>
-      <button
-        class="shadow-none rounded-circle flex-middle"
-        *ngIf="isRtl"
-        (click)="changeCurrentLanguage('en')"
-      >
-        <img
-          src="assets/media/flags/us.jpg"
-          class="rounded-1"
-          alt="United States"
-        />
+      <button class="shadow-none rounded-circle flex-middle" *ngIf="isRtl" (click)="changeCurrentLanguage('en')">
+        <img src="assets/media/flags/us.jpg" class="rounded-1" alt="United States"/>
       </button>
-      <button
-        class="shadow-none rounded-circle flex-middle"
-        *ngIf="!isRtl"
-        (click)="changeCurrentLanguage('ar')"
-      >
-        <img
-          src="assets/media/flags/saudi-arabia.svg"
-          class="rounded-1"
-          alt="Saudi Arabia"
-        />
+      <button class="shadow-none rounded-circle flex-middle" *ngIf="!isRtl" (click)="changeCurrentLanguage('ar')">
+        <img src="assets/media/flags/saudi-arabia.svg" class="rounded-1" alt="Saudi Arabia"/>
       </button>
       <div [cdkMenuTriggerFor]="userOverlay" class="user-container">
         <div class="position-relative">
-          <img
-            class="rounded-3"
-            src="assets/media/avatar/300-9.jpg"
-            alt="User"
-          />
-          <span
-            class="position-absolute rounded-circle"
-            [ngStyle]="isRtl ? { left: '-3px' } : { right: '-3px' }"
-          ></span>
+          <img class="rounded-3" src="assets/media/avatar/300-9.jpg" alt="User"/>
+          <span class="position-absolute rounded-circle" [ngStyle]="isRtl ? { left: '-3px' } : { right: '-3px' }"></span>
         </div>
       </div>
     </div>

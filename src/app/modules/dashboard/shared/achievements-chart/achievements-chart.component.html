@@ -3,12 +3,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path d="M23 6L13.5 15.5L8.5 10.5L1 18M23 6H17M23 6V12" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <h6 class="fw-bold" *ngIf="activityRemote" translate="dashboard.home.achievementsChart.activityRemote"></h6>
-    <h6 class="fw-bold" *ngIf="activityRecorded" translate="dashboard.home.achievementsChart.activityRecorded"></h6>
-    <h6 class="fw-bold" *ngIf="activityOnSite" translate="dashboard.home.achievementsChart.activityOnSite"></h6>
-    <h6 class="fw-bold" *ngIf="activityCompact" translate="dashboard.home.achievementsChart.activityCompact"></h6>
-    <h6 class="fw-bold" *ngIf="achievementRate" translate="dashboard.home.achievementsChart.achievementRate"></h6>
-    <h6 class="fw-bold" *ngIf="percentageTrainees" translate="dashboard.home.achievementsChart.percentageTrainees"></h6>
+    <h6 class="fw-bold" [translate]="title"></h6>
   </div>
   <div class="row">
     <div class="col-md-8 flex-between">

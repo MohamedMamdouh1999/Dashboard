@@ -10,7 +10,6 @@ import { AchievementsChartComponent } from './shared/achievements-chart/achievem
 import { CounterDetailsComponent } from './shared/counter-details/counter-details.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { MetricCoursesComponent } from './shared/metric-courses/metric-courses.component';
-import { MetricMonthComponent } from './shared/metric-month/metric-month.component';
 import { TotalChartComponent } from './shared/total-chart/total-chart.component';
 import { TableComponent } from './shared/table/table.component';
 import { ChartModule } from 'primeng/chart';
@@ -19,6 +18,8 @@ import { NzSegmentedModule } from 'ng-zorro-antd/segmented';
 import { LineChartComponent } from './shared/line-chart/line-chart.component';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { SharedModule } from '../shared/shared.module';
+import { CounterCardComponent } from './shared/counter-card/counter-card.component';
+import { MetricCardComponent } from './shared/metric-card/metric-card.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,10 @@ import { SharedModule } from '../shared/shared.module';
     TrainingCoursesComponent,
     AchievementsChartComponent,
     CounterDetailsComponent,
+    CounterCardComponent,
     HeaderComponent,
     MetricCoursesComponent,
-    MetricMonthComponent,
+    MetricCardComponent,
     TotalChartComponent,
     TableComponent,
     LineChartComponent

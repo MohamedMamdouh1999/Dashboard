@@ -6,9 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent {
-  @Input() home: boolean = false;
-  @Input() trainees: boolean = false;
-  @Input() topTrainees: boolean = false;
-  @Input() minimumTrainees: boolean = false;
-  @Input() groups: boolean = false;
+  @Input() title!: string;
+  @Input() head1!: string;
+  @Input() head2!: string;
+  @Input() head3!: string;
+  @Input() groups!: boolean;
 }

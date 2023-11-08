@@ -6,8 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./counter-details.component.scss']
 })
 export class CounterDetailsComponent {
-  @Input() remoteCourses: boolean = false;
-  @Input() recordedCourses: boolean = false;
-  @Input() onSiteCourses: boolean = false;
-  @Input() totalOrders: boolean = false;
+  @Input() totalOrders!: boolean;
+  @Input() title!: string;
 }
