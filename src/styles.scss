@@ -16,6 +16,7 @@ body {
   font-family: var(--font-family);
   background-color: var(--main-bgc);
 }
+// Global Rules
 a {
   text-decoration: none;
 }
@@ -53,17 +54,6 @@ ul {
 }
 ::-webkit-scrollbar-button:vertical:increment {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='%23000000' viewBox='0 0 256 256'%3E%3Cpath d='M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z'%3E%3C/path%3E%3C/svg%3E");
-}
-input,
-select,
-textarea {
-  border-inline-start-width: 7px !important;
-}
-::placeholder {
-  color: var(--placeholder-color) !important;
-}
-.error-message {
-  font-size: 14px;
 }
 // Custom CSS Framwork
 .flex- {
@@ -108,3 +98,16 @@ textarea {
     }
   }
 }
+// Global Style
+input,
+select,
+textarea {
+  border-inline-start-width: 7px !important;
+}
+::placeholder {
+  color: var(--placeholder-color) !important;
+}
+.error-message {
+  font-size: 12px;
+}
+
