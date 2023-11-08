@@ -162,20 +162,27 @@
     "structureManagement": {
       "structureManagement": "إدارة هيكل المؤسسة",
       "addOrganization": "إضافة جهه",
-      "form": {
-        "organizationType": "نوع الجهه :",
-        "nameAr": "الإسم باللغة العربية :",
-        "nameEn": "الإسم باللغة الإنجليزية :",
-        "description": "تفاصيل :",
-        "save": "حفظ",
-        "cancel": "إلغاء",
-        "select": "إختر",
-        "errors": {
-          "required": "هذا الحقل مطلوب",
-          "patternAr": "يجب إدخال حروف عربية",
-          "patternEn": "يجب إدخال حروف إنجليزية"
-        }
-      }
+      "noData": "لا يوجد بيانات",
+      "titleDelete": "هل أنت متأكد؟",
+      "messageDelete": "سوف يتم حذف البيانات والبيانات ذات الصلة نهائياً!"
+    }
+  },
+  "forms": {
+    "placeholders": {
+      "organizationType": "نوع الجهه *",
+      "nameAr": "الإسم باللغة العربية *",
+      "nameEn": "الإسم باللغة الإنجليزية *",
+      "description": "تفاصيل"
+    },
+    "errors": {
+      "required": "هذا الحقل مطلوب",
+      "patternAr": "يجب إدخال حروف عربية",
+      "patternEn": "يجب إدخال حروف إنجليزية"
+    },
+    "buttons": {
+      "confirm": "تأكيد",
+      "save": "حفظ",
+      "cancel": "إلغاء"
     }
   }
 }

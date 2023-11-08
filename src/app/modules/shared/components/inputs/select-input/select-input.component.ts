@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR, ValidationErrors } from '@angular/forms';
 
 @Component({
   selector: 'app-select-input',
@@ -12,7 +12,11 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   }]
 })
 export class SelectInputComponent implements ControlValueAccessor {
-  @Input() label!: string;
+  @Input() errors!: ValidationErrors | null | undefined;
+  @Input() submitted!: boolean;
+  @Input() required!: boolean;
+  @Input() touched!: boolean | undefined;
+  @Input() placeholder!: string;
   @Input() name!: string;
   @Input() id!: string;
   value!: string;

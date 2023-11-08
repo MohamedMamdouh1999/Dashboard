@@ -162,20 +162,27 @@
     "structureManagement": {
       "structureManagement": "Structure Management",
       "addOrganization": "Add Organization",
-      "form": {
-        "organizationType": "Organization Type",
-        "nameAr": "Name in Arabic",
-        "nameEn": "Name in English",
-        "description": "Description",
-        "save": "Save",
-        "cancel": "Cancel",
-        "select": "Select",
-        "errors": {
-          "required": "This field is required",
-          "patternAr": "You must enter Arabic letters",
-          "patternEn": "You must enter English letters"
-        }
-      }
+      "noData": "No Data",
+      "titleDelete": "Are you sure?",
+      "messageDelete": "Data and related data will be permanently deleted!"
+    }
+  },
+  "forms": {
+    "placeholders": {
+      "organizationType": "Organization Type *",
+      "nameAr": "Name in Arabic *",
+      "nameEn": "Name in English *",
+      "description": "Description"
+    },
+    "errors": {
+      "required": "This field is required",
+      "patternAr": "You must enter Arabic letters",
+      "patternEn": "You must enter English letters"
+    },
+    "buttons": {
+      "confirm": "Confirm",
+      "save": "Save",
+      "cancel": "Cancel"
     }
   }
 }

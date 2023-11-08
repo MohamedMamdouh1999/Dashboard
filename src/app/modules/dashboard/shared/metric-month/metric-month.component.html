@@ -3,7 +3,7 @@
     <h5 *ngIf="trainees" class="fw-bolder" translate="dashboard.trainees.trainers"></h5>
     <h5 *ngIf="groups" class="fw-bolder" translate="dashboard.groups.groups"></h5>
     <h4 class="mb-2 fw-bolder h1">109</h4>
-    <div class="d-flex flex-wrap align-items-center">
+    <div class="flex-align-wrap">
       <span class="rounded-pill px-3 py-1" [ngStyle]="{'background-color': number > 50 ? '#ECFDF3' : '#FEF3F2', 'color': number > 50 ? '#027A48' : '#B42318'}">
         {{number}}%
         <svg *ngIf="number > 50" xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 12 12" fill="none">

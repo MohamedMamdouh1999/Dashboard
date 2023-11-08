@@ -1,2 +1,3 @@
-<label class="mb-2" [for]="id" [translate]="label"></label>
-<textarea [ngModel]="value" (ngModelChange)="onChange($event)" (blur)="onTouched()" class="form-control shadow-none" [name]="name" [id]="id"></textarea>
+<div class="form-group mb-3">
+  <textarea [ngModel]="value" (ngModelChange)="onChange($event)" (blur)="onTouched()" class="form-control shadow-none" [id]="id" [name]="name" placeholder="{{placeholder | translate}}"></textarea>
+</div>

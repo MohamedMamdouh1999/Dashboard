@@ -1,13 +1,29 @@
-button {
-  width: 45%;
-}
 :host ::ng-deep {
   .p-dialog-mask {
     top: 20px;
     .p-dialog {
       margin-inline-start: 5rem;
+      .p-dialog-header {
+        background-color: var(--main-color);
+        .p-dialog-header-close {
+          color: white;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
       .p-dialog-content {
-        padding: 0px 10px 10px !important;
+        padding: 10px;
+        button {
+          width: 48%;
+        }
+        .swal-icon {
+          width: 88px;
+          height: 88px;
+          span {
+            font-size: 60px;
+          }
+        }
       }
     }
   }

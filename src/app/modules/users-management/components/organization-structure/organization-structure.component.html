@@ -1,122 +1,15 @@
-<app-table-head (visible)="visible = $event" [organizationStructure]="true" [title]="'usersManagement.structureManagement.structureManagement'"></app-table-head>
-<p-dialog [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [breakpoints]="{ '960px': '75vw' }" [draggable]="false" [resizable]="false">
-  <form [formGroup]="usersManagement" (ngSubmit)="submitForm(usersManagement)" #form="ngForm">
-    <div class="form-group mb-3">
-      <app-select-input formControlName="type"  [id]="'organizationType'" [name]="'organizationType'" [label]="'usersManagement.structureManagement.form.organizationType'"></app-select-input>
-      <p *ngIf="form.submitted && usersManagement.get('type')?.errors" class="text-danger mb-3" translate="usersManagement.structureManagement.form.errors.required"></p>
-    </div>
-    <div class="form-group mb-3">
-      <app-text-input formControlName="nameAr" [type]="'text'" [id]="'organizationNameAr'" [name]="'organizationNameAr'" [label]="'usersManagement.structureManagement.form.nameAr'"></app-text-input>
-      <div *ngIf="form.submitted || (nameAr?.errors && nameAr?.touched)" class="text-danger mb-3">
-        <p *ngIf="form.submitted && nameAr?.getError('required')" class="mb-0" translate="usersManagement.structureManagement.form.errors.required"></p>
-        <p *ngIf="nameAr?.getError('pattern')" class="mb-0" translate="usersManagement.structureManagement.form.errors.patternAr"></p>
-      </div>
-    </div>
-    <div class="form-group mb-3">
-      <app-text-input formControlName="nameEn" [type]="'text'" [id]="'organizationNameEn'" [name]="'organizationNameEn'" [label]="'usersManagement.structureManagement.form.nameEn'"></app-text-input>
-      <div *ngIf="form.submitted || (nameEn?.errors && nameEn?.touched)" class="text-danger mb-3">
-        <p *ngIf="form.submitted && nameEn?.getError('required')" class="mb-0" translate="usersManagement.structureManagement.form.errors.required"></p>
-        <p *ngIf="nameEn?.getError('pattern')" class="mb-0" translate="usersManagement.structureManagement.form.errors.patternEn"></p>
-      </div>
-    </div>
-    <div class="form-group mb-3">
-      <app-text-area-input formControlName="description" [id]="'organizationDescription'" [name]="'organizationDescription'" [label]="'usersManagement.structureManagement.form.description'"></app-text-area-input>
-    </div>
-    <div class="d-flex flex-wrap align-items-center justify-content-between">
-      <button type="submit" class="btn btn-success shadow-none border-0" translate="usersManagement.structureManagement.form.save"></button>
-      <button (click)="visible = false; form.reset(null)" class="btn btn-danger shadow-none border-0" translate="usersManagement.structureManagement.form.cancel"></button>
-    </div>
-  </form>
-</p-dialog>
+<app-header-section (visible)="showForm = $event" [organizationStructure]="true" [title]="'usersManagement.structureManagement.structureManagement'"></app-header-section>
 <section class="p-3 shadow-sm rounded-bottom-3">
+  <!-- <div class="text-center my-5">
+    <p class="mb-0" translate="usersManagement.structureManagement.noData"></p>
+  </div> -->
   <div class="row gy-3">
     <div class="col-xl-3 col-lg-4 col-md-6">
       <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
         <span class="position-absolute rounded-circle"></span>
         <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
-        <div class="d-flex align-items-center text-center">
+        <div class="flex-middle text-center">
           <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمنطقة الجوف</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6">
-      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
-        <span class="position-absolute rounded-circle"></span>
-        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
-        <div class="d-flex align-items-center text-center">
-          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 2]">الشئون الصحية بمنطقة نجران</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6">
-      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
-        <span class="position-absolute rounded-circle"></span>
-        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
-        <div class="d-flex align-items-center text-center">
-          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 3]">الشئون الصحية بمنطقة عسير</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6">
-      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
-        <span class="position-absolute rounded-circle"></span>
-        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
-        <div class="d-flex align-items-center text-center">
-          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمنطقة تبوك</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6">
-      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
-        <span class="position-absolute rounded-circle"></span>
-        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
-        <div class="d-flex align-items-center text-center">
-          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمنطقة القصيم</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6">
-      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
-        <span class="position-absolute rounded-circle"></span>
-        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
-        <div class="d-flex align-items-center text-center">
-          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمنطقة الرياض</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6">
-      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
-        <span class="position-absolute rounded-circle"></span>
-        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
-        <div class="d-flex align-items-center text-center">
-          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمحافظة بيشة</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6">
-      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
-        <span class="position-absolute rounded-circle"></span>
-        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
-        <div class="d-flex align-items-center text-center">
-          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمحافظة القنفذة</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6">
-      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
-        <span class="position-absolute rounded-circle"></span>
-        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
-        <div class="d-flex align-items-center text-center">
-          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الشئون الصحية بمحافظة الأحساء</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6">
-      <div class="ag-type rounded-3 p-4 overflow-hidden text-start position-relative bg-white">
-        <span class="position-absolute rounded-circle"></span>
-        <i [cdkMenuTriggerFor]="settingsOverlay" class="fa-solid fa-ellipsis-vertical position-relative"></i>
-        <div class="d-flex align-items-center text-center">
-          <a class="position-relative fw-bold" [routerLink]="['/users-management/organization', 1]">الإدارة العامة للطواري والسلامة والنقل الأسعافي</a>
         </div>
       </div>
     </div>
@@ -125,8 +18,79 @@
 <ng-template #settingsOverlay>
   <div class="overlay-fall" cdkMenu>
     <ul>
-      <li cdkMenuItem (click)="visible = !visible;" class="mt-1 rounded-circle d-flex align-items-center justify-content-center"><i class="text-white fa-solid fa-pen"></i></li>
-      <li cdkMenuItem class="mt-1 rounded-circle d-flex align-items-center justify-content-center"><i class="text-white fa-solid fa-trash-can"></i></li>
+      <li cdkMenuItem (click)="showForm = !showForm" class="mt-1 rounded-circle flex-middle">
+        <i class="text-white fa-solid fa-pen"></i>
+      </li>
+      <li cdkMenuItem (click)="showConfirmDelete = !showConfirmDelete" class="mt-1 rounded-circle flex-middle">
+        <i class="text-white fa-solid fa-trash-can"></i>
+      </li>
     </ul>
   </div>
 </ng-template>
+<p-dialog [(visible)]="showForm" [modal]="true" [style]="{width: '50vw'}" [breakpoints]="{'960px': '75vw'}" [draggable]="false" [resizable]="false">
+  <form [formGroup]="usersManagement" (ngSubmit)="submitForm(usersManagement)" #form="ngForm">
+    <app-select-input
+      formControlName="type"
+      [submitted]="form.submitted"
+      [touched]="usersManagement.get('type')?.touched"
+      [errors]="usersManagement.get('type')?.errors"
+      [required]="usersManagement.get('type')?.getError('required')"
+      [id]="'organizationType'"
+      [name]="'organizationType'"
+      [placeholder]="'forms.placeholders.organizationType'"
+    ></app-select-input>
+
+    <app-text-input
+      formControlName="nameAr"
+      [submitted]="form.submitted"
+      [errors]="nameAr?.errors"
+      [touched]="nameAr?.touched"
+      [required]="nameAr?.getError('required')"
+      [patternAr]="nameAr?.getError('pattern')"
+      [type]="'text'"
+      [id]="'organizationNameAr'"
+      [name]="'organizationNameAr'"
+      [placeholder]="'forms.placeholders.nameAr'"
+    ></app-text-input>
+
+    <app-text-input
+      formControlName="nameEn"
+      [submitted]="form.submitted"
+      [errors]="nameEn?.errors"
+      [touched]="nameEn?.touched"
+      [required]="nameEn?.getError('required')"
+      [patternEn]="nameEn?.getError('pattern')"
+      [type]="'text'"
+      [id]="'organizationNameEn'"
+      [name]="'organizationNameEn'"
+      [placeholder]="'forms.placeholders.nameEn'"
+    ></app-text-input>
+
+    <app-text-area-input
+      formControlName="description"
+      [id]="'organizationDescription'"
+      [name]="'organizationDescription'"
+      [placeholder]="'forms.placeholders.description'"
+    ></app-text-area-input>
+
+    <div class="flex-between-wrap">
+      <button type="submit" class="btn btn-success shadow-none border-0" translate="forms.buttons.save"></button>
+      <button (click)="showForm = !showForm; form.resetForm()" class="btn btn-danger shadow-none border-0" translate="forms.buttons.cancel"></button>
+    </div>
+  </form>
+</p-dialog>
+<p-dialog [(visible)]="showConfirmDelete" [modal]="true" [style]="{ width: '50vw' }" [breakpoints]="{ '960px': '75vw' }" [draggable]="false" [resizable]="false">
+  <div class="flex-middle">
+    <div class="swal-icon flex-middle rounded-circle border border-3 border-danger">
+      <span class="text-danger">!</span>
+    </div>
+  </div>
+  <div class="text-center my-4">
+    <h3 translate="usersManagement.structureManagement.titleDelete"></h3>
+    <p class="mt-2" translate="usersManagement.structureManagement.messageDelete"></p>
+  </div>
+  <div class="flex-between-wrap">
+    <button type="submit" class="btn btn-success shadow-none border-0" translate="forms.buttons.confirm"></button>
+    <button (click)="showConfirmDelete = false" class="btn btn-danger shadow-none border-0" translate="forms.buttons.cancel"></button>
+  </div>
+</p-dialog>

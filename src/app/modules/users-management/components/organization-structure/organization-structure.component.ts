@@ -11,11 +11,12 @@ export class OrganizationStructureComponent implements OnInit {
   constructor(private _ActivatedRoute:ActivatedRoute, private fb:FormBuilder) {}
   usersManagement = this.fb.group({
     type: [null, [Validators.required]],
-    nameAr: [null, [Validators.required, Validators.pattern(/^[أ-ي\s]{2,50}$/)]],
-    nameEn: [null, [Validators.required, Validators.pattern(/^[A-Za-z\s]{2,50}$/)]],
+    nameAr: [null, [Validators.required, Validators.pattern(/^[أ-ي\s]{1,50}$/)]],
+    nameEn: [null, [Validators.required, Validators.pattern(/^[A-Za-z\s]{1,50}$/)]],
     description: [null]
   }, {updateOn: 'change'})
-  visible: boolean = false;
+  showConfirmDelete: boolean = false;
+  showForm: boolean = false;
   id!: number;
   ngOnInit(): void {
     this._ActivatedRoute.paramMap.subscribe(paramMap => this.id = Number(paramMap.get('id')))

@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap");
 :root {
-  --border-color: #ccc;
   --main-color: #096d22;
+  --border-color: #ccc;
   --main-bgc: #f4f7fa;
+  --placeholder-color: #dee2e6;
   --font-family: "Cairo", sans-serif;
 }
 * {
@@ -15,7 +16,6 @@ body {
   font-family: var(--font-family);
   background-color: var(--main-bgc);
 }
-// Start Global Rules //
 a {
   text-decoration: none;
 }
@@ -54,4 +54,57 @@ ul {
 ::-webkit-scrollbar-button:vertical:increment {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' fill='%23000000' viewBox='0 0 256 256'%3E%3Cpath d='M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z'%3E%3C/path%3E%3C/svg%3E");
 }
-// End Global Rules //
+input,
+select,
+textarea {
+  border-inline-start-width: 7px !important;
+}
+::placeholder {
+  color: var(--placeholder-color) !important;
+}
+.error-message {
+  font-size: 14px;
+}
+// Custom CSS Framwork
+.flex- {
+  &middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &evenly {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  &start {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  &end {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  &align {
+    display: flex;
+    align-items: center;
+    &-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+  &between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

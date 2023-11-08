@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-table-head',
-  templateUrl: './table-head.component.html',
-  styleUrls: ['./table-head.component.scss']
+  selector: 'app-header-section',
+  templateUrl: './header-section.component.html',
+  styleUrls: ['./header-section.component.scss']
 })
-export class TableHeadComponent {
+export class HeaderSectionComponent {
   @Output() visible = new EventEmitter<boolean>();
   @Input() organizationStructure: boolean = false;
   @Input() title: string = '';

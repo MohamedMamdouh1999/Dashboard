@@ -12,9 +12,9 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   }]
 })
 export class TextAreaInputComponent implements ControlValueAccessor {
-  @Input() label!: string
-  @Input() name!: string
-  @Input() id!: string
+  @Input() placeholder!: string;
+  @Input() name!: string;
+  @Input() id!: string;
   value!: string;
   onChange!: (value: string) => void;
   onTouched!: () => void;
