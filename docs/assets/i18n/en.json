@@ -160,11 +160,17 @@
   },
   "usersManagement": {
     "structureManagement": {
-      "structureManagement": "Structure Management",
+      "title": "Structure Management",
       "addOrganization": "Add Organization",
       "noData": "No Data",
       "titleDelete": "Are you sure?",
       "messageDelete": "Data and related data will be permanently deleted!"
+    },
+    "roleManagement": {
+      "title": "Role Management"
+    },
+    "usersManagement": {
+      "title": "Users Management"
     }
   },
   "forms": {

@@ -160,11 +160,17 @@
   },
   "usersManagement": {
     "structureManagement": {
-      "structureManagement": "إدارة هيكل المؤسسة",
+      "title": "إدارة هيكل المؤسسة",
       "addOrganization": "إضافة جهه",
       "noData": "لا يوجد بيانات",
       "titleDelete": "هل أنت متأكد؟",
       "messageDelete": "سوف يتم حذف البيانات والبيانات ذات الصلة نهائياً!"
+    },
+    "roleManagement": {
+      "title": "إدارة أدوار المستخدمين"
+    },
+    "usersManagement": {
+      "title": "إدارة المستخدمين"
     }
   },
   "forms": {
