@@ -25,9 +25,9 @@ export class HeaderComponent {
     })
   }
 
+  @Input() title!: string;
   @Input() home!: boolean;
   @Input() trainingCourses!: boolean;
-  @Input() title!: string;
   dateFormat: string = 'yyyy/MM/dd';
   isRtl: boolean = true;
 

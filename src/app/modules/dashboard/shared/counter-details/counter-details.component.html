@@ -1,34 +1,34 @@
 <article class="my-3">
-  <h4 class="mb-2" [translate]="title"></h4>
+  <h4 class="mb-2" [translate]="'dashboard.home.counterDetails.' + title"></h4>
   <div *ngIf="!totalOrders" class="row gy-3">
     <div class="col-md-6 col-lg-3">
-      <app-counter-card [student]="true" [total]="2468" [description]="'dashboard.home.counterDetails.totalTrainees'"></app-counter-card>
+      <app-counter-card [student]="true" [total]="2468" [description]="'totalTrainees'"></app-counter-card>
     </div>
     <div class="col-md-6 col-lg-3">
-      <app-counter-card [hour]="true" [total]="2345" [description]="'dashboard.home.counterDetails.totalHours'"></app-counter-card>
+      <app-counter-card [hour]="true" [total]="2345" [description]="'totalHours'"></app-counter-card>
     </div>
     <div class="col-md-6 col-lg-3">
-      <app-counter-card [groups]="true" [total]="213" [description]="'dashboard.home.counterDetails.numberGroups'"></app-counter-card>
+      <app-counter-card [groups]="true" [total]="213" [description]="'numberGroups'"></app-counter-card>
     </div>
     <div class="col-md-6 col-lg-3">
-      <app-counter-card [tracks]="true" [total]="27" [description]="'dashboard.home.counterDetails.numberTracks'"></app-counter-card>
+      <app-counter-card [tracks]="true" [total]="27" [description]="'numberTracks'"></app-counter-card>
     </div>
   </div>
   <div *ngIf="totalOrders" class="flex-between-wrap">
     <div class="item">
-      <app-counter-card [tv]="true" [total]="2468" [description]="'dashboard.home.counterDetails.training'"></app-counter-card>
+      <app-counter-card [tv]="true" [total]="2468" [description]="'training'"></app-counter-card>
     </div>
     <div class="item">
-      <app-counter-card [analysis]="true" [total]="2345" [description]="'dashboard.home.counterDetails.attendingConference'"></app-counter-card>
+      <app-counter-card [analysis]="true" [total]="2345" [description]="'attendingConference'"></app-counter-card>
     </div>
     <div class="item">
-      <app-counter-card [groups]="true" [total]="213" [description]="'dashboard.home.counterDetails.cooperativeTraining'"></app-counter-card>
+      <app-counter-card [groups]="true" [total]="213" [description]="'cooperativeTraining'"></app-counter-card>
     </div>
     <div class="item">
-      <app-counter-card [star]="true" [total]="27" [description]="'dashboard.home.counterDetails.franchiseTraining'"></app-counter-card>
+      <app-counter-card [star]="true" [total]="27" [description]="'franchiseTraining'"></app-counter-card>
     </div>
     <div class="item">
-      <app-counter-card [bag]="true" [total]="27" [description]="'dashboard.home.counterDetails.experienceTraining'"></app-counter-card>
+      <app-counter-card [bag]="true" [total]="27" [description]="'experienceTraining'"></app-counter-card>
     </div>
   </div>
 </article>

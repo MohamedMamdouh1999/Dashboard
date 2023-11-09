@@ -1,12 +1,10 @@
-<app-header [title]="'sidenav.dashboard.trainees'"></app-header>
-<app-metric-courses [lastMonth]="true" [title]="'dashboard.trainees.trainers'"></app-metric-courses>
+<app-header [title]="'trainees'"></app-header>
+<app-metric-courses [lastMonth]="true" [title]="'trainees.trainers'"></app-metric-courses>
 <div class="row my-2">
   <div class="col-lg-6">
-    <app-table [title]="'dashboard.table.topTrainees'"
-    [head1]="'dashboard.table.traineeName'" [head2]="'dashboard.table.numberTrainingCourses'" [head3]="'dashboard.table.courseRate'"></app-table>
+    <app-table [title]="'topTrainees'" [head1]="'traineeName'" [head2]="'numberTrainingCourses'" [head3]="'courseRate'"></app-table>
   </div>
   <div class="col-lg-6">
-    <app-table [title]="'dashboard.table.minimumTrainees'"
-    [head1]="'dashboard.table.traineeName'" [head2]="'dashboard.table.numberTrainingCourses'" [head3]="'dashboard.table.courseRate'"></app-table>
+    <app-table [title]="'minimumTrainees'" [head1]="'traineeName'" [head2]="'numberTrainingCourses'" [head3]="'courseRate'"></app-table>
   </div>
 </div>

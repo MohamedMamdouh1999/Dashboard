@@ -1,5 +1,5 @@
 <div class="form-group mb-3">
-  <input [ngClass]="{'text-danger border-danger': submitted || (errors && touched), 'border-success': !errors}" [ngModel]="value" (ngModelChange)="onChange($event)" (blur)="onTouched()" class="form-control shadow-none" [type]="type" [id]="id" [name]="name" placeholder="{{placeholder | translate}}"/>
+  <input [ngClass]="{'text-danger border-danger': submitted || (errors && touched), 'border-success': !errors}" [ngModel]="value" (ngModelChange)="onChange($event)" (blur)="onTouched()" class="form-control shadow-none" [type]="type" [id]="id" [name]="name" placeholder="{{'forms.placeholders.' + placeholder | translate}}"/>
   <div *ngIf="submitted || (errors && touched)" class="text-danger">
     <p *ngIf="(submitted || touched) && required" class="mb-0 error-message" translate="forms.errors.required"></p>
     <p *ngIf="patternAr" class="mb-0 error-message" translate="forms.errors.patternAr"></p>

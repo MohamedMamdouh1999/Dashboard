@@ -1,5 +1,5 @@
 <header class="mb-4 flex-between-wrap">
-  <h2 class="fw-bolder" [translate]="title"></h2>
+  <h2 class="fw-bolder" [translate]="'sidenav.dashboard.' + title"></h2>
   <div>
     <nz-range-picker *ngIf="home || trainingCourses" [(ngModel)]="dateFormat"></nz-range-picker>
     <button class="btn text-white py-2 my-md-0 my-1" translate="dashboard.exportBtn">

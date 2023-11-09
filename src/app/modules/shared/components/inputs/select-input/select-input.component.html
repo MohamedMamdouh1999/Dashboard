@@ -1,6 +1,6 @@
 <div class="form-group mb-3">
   <select [ngClass]="{'text-danger border-danger': (submitted || touched) && required, 'border-success': !errors}" [ngModel]="value" (ngModelChange)="onChange($event)" (blur)="onTouched()" class="form-select shadow-none" [name]="name" [id]="id">
-    <option [ngValue]="null" [translate]="placeholder"></option>
+    <option [ngValue]="null" [translate]="'forms.placeholders.' + placeholder"></option>
     <option [ngValue]="'حكومية'">حكومية</option>
     <option [ngValue]="'خاصة'">خاصة</option>
   </select>

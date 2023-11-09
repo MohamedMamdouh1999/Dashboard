@@ -17,7 +17,7 @@
           </clipPath>
         </defs>
       </svg>
-      {{title | translate}}
+      {{'dashboard.home.totalChart.' + title | translate}}
     </h5>
     <div class="row flex-align">
       <div class="col-lg-6">
@@ -65,7 +65,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
             <circle cx="4" cy="4" r="4" fill="#000"/>
           </svg>
-          <span class="total-text text-nowrap" [translate]="title"></span>
+          <span class="total-text text-nowrap" [translate]="'dashboard.home.totalChart.' + title"></span>
           <span class="total-number rounded-pill">100</span>
         </div>
       </div>

@@ -3,13 +3,13 @@
     <thead>
       <tr>
         <td colspan="3">
-          <h5 class="py-1 mb-0 fw-bolder" [translate]="title"></h5>
+          <h5 class="py-1 mb-0 fw-bolder" [translate]="'dashboard.table.' + title"></h5>
         </td>
       </tr>
       <tr>
-        <td [translate]="head1"></td>
-        <td [translate]="head2"></td>
-        <td [translate]="head3"></td>
+        <td [translate]="'dashboard.table.' + head1"></td>
+        <td [translate]="'dashboard.table.' + head2"></td>
+        <td [translate]="'dashboard.table.' + head3"></td>
       </tr>
     </thead>
     <tbody>
